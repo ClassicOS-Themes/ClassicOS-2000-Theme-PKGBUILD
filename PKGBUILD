@@ -1,4 +1,4 @@
-pkgname=classicos-2000-git
+pkgname=classicos-98-git
 pkgver=ecb5356
 pkgrel=1
 pkgdesc="Millenium PC Look for GTK3"
@@ -16,7 +16,7 @@ pkgver() {
 }
 
 build() {
-  arch-meson "ClassicOS-2000-Theme" build
+  arch-meson -Dstandard_colors=false "ClassicOS-2000-Theme" build
   meson compile -C build
 }
 

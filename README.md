@@ -1,6 +1,6 @@
-# ClassicOS 2000 PKGBUILD
+# ClassicOS 98 PKGBUILD
 
-A PKGBUILD for fellow Arch users to install the "ClassicOS2000" theme.
+A PKGBUILD for fellow Arch users to install the "ClassicOS98" theme.
 
 ## Build Dependencies
 

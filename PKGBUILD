@@ -1,5 +1,5 @@
 pkgname=classicos-2000-git
-pkgver=d463191
+pkgver=71e6391
 pkgrel=1
 pkgdesc="Millenium PC Look for GTK2/3"
 arch=('any')
@@ -19,11 +19,30 @@ pkgver() {
 }
 
 build() {
-  arch-meson "ClassicOS-2000-Theme" build
-  meson compile -C build
+  source './ClassicOS-2000-Theme/schemes'
+  i=0
+  while [ "$i" -lt "${#schemes[@]}" ]; do
+    lighttheme="${schemes[i]}"
+    i=$((i+1))
+    darktheme="${schemes[i]}"
+    i=$((i+1))
+    name="${schemes[i]}"
+    i=$((i+1))
+    arch-meson -Dcolorscheme="$lighttheme" -Ddark_colorscheme="$darktheme" -Dtheme_name="ClassicOS$name" "ClassicOS-2000-Theme" "build$i"
+    meson compile -C "build$i"
+  done
 }
-
 package() {
-  meson install -C build --destdir "$pkgdir"
 
+  source './ClassicOS-2000-Theme/schemes'
+  i=0
+  while [ "$i" -lt "${#schemes[@]}" ]; do
+    lighttheme="${schemes[i]}"
+    i=$((i+1))
+    darktheme="${schemes[i]}"
+    i=$((i+1))
+    name="${schemes[i]}"
+    i=$((i+1))
+    meson install -C "build$i" --destdir "$pkgdir"
+  done
 }

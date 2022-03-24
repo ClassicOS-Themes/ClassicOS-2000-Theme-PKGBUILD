@@ -1,4 +1,5 @@
 *
 !.gitignore
 !PKGBUILD
+!PKGBUILD-all
 !README.md

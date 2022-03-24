@@ -1,12 +1,15 @@
 pkgname=classicos-2000-git
-pkgver=ecb5356
+pkgver=d463191
 pkgrel=1
-pkgdesc="Millenium PC Look for GTK3"
+pkgdesc="Millenium PC Look for GTK2/3"
 arch=('any')
 url="https://github.com/ClassicOS-Themes/ClassicOS-2000-Theme"
-license=('MIT')
+license=('GPL' 'MIT')
 makedepends=('meson' 'sassc')
-optdepends=('gtk3: required for CSS/GTK3 theme')
+optdepends=(
+  'gtk3: required for CSS/GTK3 theme'
+  'gtk-engines: required for GTK2 theme'
+)
 source=("ClassicOS-2000-Theme::git+https://github.com/ClassicOS-Themes/ClassicOS-2000-Theme.git")
 md5sums=('SKIP')
 

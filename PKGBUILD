@@ -1,5 +1,5 @@
 pkgname=classicos-2000-git
-pkgver=71e6391
+pkgver=1.0_git_cdf4c9e
 pkgrel=1
 pkgdesc="Millenium PC Look for GTK2/3"
 arch=('any')
@@ -15,7 +15,7 @@ md5sums=('SKIP')
 
 pkgver() {
   cd "ClassicOS-2000-Theme"
-	echo "$(git rev-parse --short HEAD)"
+	echo "1.0_git_$(git rev-parse --short HEAD)"
 }
 
 build() {

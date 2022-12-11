@@ -15,5 +15,5 @@ Install with `sudo pacman -S sassc meson`
 
 1. Clone the git repository
 2. `cd` into the repo
-3. `makepkg` or `makepkg -p PKGBUILD-all` (PKGBUILD-all builds all available color schemes)
+3. `makepkg`
 4. Install the resultant package with `pacman -U`.

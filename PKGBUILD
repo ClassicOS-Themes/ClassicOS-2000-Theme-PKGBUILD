@@ -1,5 +1,5 @@
 # Maintainer: tomatoes <tomatoes@tin-can.mozmail.com> 
-_pkgbase=classicos-2000
+_pkgbase=classicos-2000-gtk-theme
 _pkgbv=1.2
 pkgname=$_pkgbase-git
 pkgver=1.2.r0.0
